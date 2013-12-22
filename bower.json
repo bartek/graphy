@@ -1,0 +1,20 @@
+{
+  "name": "graphy",
+  "version": "0.0.0",
+  "authors": [
+    "Bartek Ciszkowski <bart.ciszk@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "mustache": "~0.8.0"
+  }
+}
