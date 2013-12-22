@@ -29,6 +29,31 @@ Run
     $ node server.js
     
 
+Graph Data
+---
+
+Currently there is no guidance as to how to add a graph. Work in progress! Graph
+data can be stored on the redis key (currently named 'graphs', derp) as a JSON
+string.
+
+    redis = require('then-redis');
+
+    var db = redis.createClient();
+    db.hset('graphs', 1, JSON.stringify({
+        "id": "1",
+        "width":"586",
+        "height":"308",
+        "from":"-7days",
+        "target": [
+            "stats.api.webhook.handled",
+            "stats.api.webhook.received",
+        ],
+        "_refresh": "5sec" // meta attribute for browser refresh rate
+    }));
+
+This spec is still a work in progress.
+
+
 Test
 ---
 
